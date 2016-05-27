@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Test!</title>
+    <link rel="stylesheet" href="assets/mocha.css">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script src="assets/mocha.js"></script>
+    <script src="https://cdn.rawgit.com/Automattic/expect.js/0.3.1/index.js"></script>
+    <script src="assets/sinon-1.17.3.js"></script>
+    <script src="https://cdn.rawgit.com/jquery/jquery/2.1.4/dist/jquery.min.js"></script>
+
+    <script>mocha.setup('bdd')</script>
+    <script src="build/test.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.globals(['jQuery']);
+      mocha.run();
+    </script>
+  </body>
+</html>
